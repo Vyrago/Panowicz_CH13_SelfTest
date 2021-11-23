@@ -5,42 +5,103 @@ creation of code that is:
     C. Reliable
 --> D. All of the above
 
+***************************************
+
 2. Can a primitive type be used as a type argument?
-    yes
+
+    no
+
+***************************************
 
 3. Show how to declare a class called FlightSched that takes 
 two generic parameters.
 
+    class FlightSched
+        {
+        //body
+        }
+
+***************************************
+
 4. Beginning with your answer to question 3, change FlightSched’s 
 second type parameter so that it must extend Thread.
+
+    class FlightSchedextends superclass>
+        {
+        //body
+        }
+
+***************************************
 
 5. Now, change FlightSched so that its second type parameter must 
 be a subclass of its first type parameter.
 
+    class FlightSchedextends T>
+        {
+        //body
+        }
+
+***************************************
+
 6. As it relates to generics, what is the ? and what does it do?
+    it is the wildcard argument, it helps match suitably typed objects
+
+***************************************
 
 7. Can the wildcard argument be bounded?
+
+    yes
+
+***************************************
 
 8. A generic method called MyGen( ) has one type parameter. Furthermore, 
 MyGen( ) has one parameter whose type is that of the type parameter. It 
 also returns an object of that type parameter. Show how to declare 
 MyGen( ).
 
+T MyGen(T object)
+    {
+    //body
+    }
+
+***************************************
+
 9. Given this generic interface
     interface IGenIF<T, V extends T> { // ...
 show the declaration of a class called MyClass that implements IGenIF.
 
+    class MyClassextends T> implements IGenIF
+    {
+    //body
+    }
+
+***************************************
+
 10. Given a generic class called Counter<T>, show how to create an object 
 of its raw type.
+    
+    Counter counterObj = new Counter;
+
+***************************************
 
 11. Do type parameters exist at run time?
+
+    no
+
+***************************************
 
 12. Convert your solution to question 10 of the Self Test for Chapter 9 
 so that it is generic. In the process, create a stack interface called 
 IGenStack that generically defines the operations push( ) and pop( ).
 
+***************************************
+
 13. What is < >?
+    the Diamond Operator.
+
+***************************************
 
 14. How can the following be simplified?
-
-MyClass<Double, String> obj = new MyClass<Double,String>(1.1,"Hi");
+    MyClass<Double, String> obj = new MyClass<Double,String>(1.1,"Hi");
+    
+    MyGen obj = new MyObject<>(1.1, "Hi");
